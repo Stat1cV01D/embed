@@ -410,7 +410,7 @@ function(b_embed TARGET FILENAME)
     )
 
     # Add the generated files to the target
-    target_include_directories(${TARGET} PUBLIC 
+    target_include_directories(${TARGET} SYSTEM PUBLIC 
         $<BUILD_INTERFACE:${EMBED_BINARY_DIR}/autogen/${TARGET_ID}/include>
         $<INSTALL_INTERFACE:>
     )
